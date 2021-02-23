@@ -1,5 +1,5 @@
 {
-  "name": "insomnia-plugin-node-rsa",
+  "name": "insomnia-plugin-nodersa",
   "version": "1.0.2",
   "description": "RSA encryption for Insomnia REST Client using node-rsa",
   "main": "index.js",
