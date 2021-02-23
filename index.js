@@ -1,9 +1,9 @@
 const crypto = require("crypto");
 const NodeRSA = require('node-rsa');
 
-const encryptStringWithRsaPublicKey = (value, key, padding) => {
+const encryptStringWithRsaPublicKey = (value, key, encryptionScheme) => {
   const nodeRsa = new NodeRSA(key, 'public', {
-		encryptionScheme: padding === 'NO_PADDING' ? undefined : padding.toLowerCase(),
+		encryptionScheme: encryptionScheme,
 	});
   return this.key.encrypt(
     value,
@@ -27,15 +27,15 @@ module.exports.templateTags = [{
         options: [
           {
             displayName: 'NO_PADDING',
-            value: crypto.constants.RSA_NO_PADDING,
+            value: undefined,
           },
           {
             displayName: 'PKCS1',
-            value: crypto.constants.RSA_PKCS1_PADDING
+            value: 'pkcs1'
           },
           {
             displayName: 'PKCS1_OAEP',
-            value: crypto.constants.RSA_PKCS1_OAEP_PADDING
+            value: 'pkcs1_oaep'
           },
         ]
       },
