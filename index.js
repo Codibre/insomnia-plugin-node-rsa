@@ -3,7 +3,7 @@ const NodeRSA = require('node-rsa');
 
 const encryptStringWithRsaPublicKey = (value, key, encryptionScheme) => {
   const nodeRsa = new NodeRSA(key, 'public', {
-		encryptionScheme: encryptionScheme,
+		encryptionScheme: encryptionScheme || undefined,
 	});
   return this.key.encrypt(
     value,
@@ -27,7 +27,7 @@ module.exports.templateTags = [{
         options: [
           {
             displayName: 'NO_PADDING',
-            value: undefined,
+            value: '',
           },
           {
             displayName: 'PKCS1',
