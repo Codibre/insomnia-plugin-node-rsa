@@ -1,13 +1,16 @@
 {
-  "name": "insomnia-plugin-rsa",
+  "name": "insomnia-plugin-node-rsa",
   "version": "1.0.0",
-  "description": "RSA encryption for Insomnia REST Client",
+  "description": "RSA encryption for Insomnia REST Client using node-rsa",
   "main": "index.js",
-  "repository": "https://github.com/MikuZZZ/insomnia-plugin-rsa.git",
+  "repository": "https://github.com/MikuZZZ/insomnia-plugin-node-rsa.git",
   "insomnia": {
     "name": "rsa",
     "description": "RSA encryption plugin for Insomnia REST Client"
   },
-  "author": "Zizhao Wang <wangzizhao@me.com>",
-  "license": "MIT"
+  "author": "Thiago Santos <tos.oliveira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-rsa": "^1.1.1"
+  }
 }

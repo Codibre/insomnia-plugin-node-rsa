@@ -1,9 +1,14 @@
 const crypto = require("crypto");
+const NodeRSA = require('node-rsa');
 
 const encryptStringWithRsaPublicKey = (value, key, padding) => {
-    const buffer = new Buffer(value);
-    const publicKey = Buffer.from(key, 'base64').toString('utf8');
-    return crypto.publicEncrypt({ key: publicKey, padding }, buffer).toString("base64");
+  const nodeRsa = new NodeRSA(key, 'public', {
+		encryptionScheme: padding === 'NO_PADDING' ? undefined : padding.toLowerCase(),
+	});
+  return this.key.encrypt(
+    value,
+    'base64',
+  );
 };
 
 module.exports.templateTags = [{
