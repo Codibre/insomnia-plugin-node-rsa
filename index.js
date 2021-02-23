@@ -5,7 +5,7 @@ const encryptStringWithRsaPublicKey = (value, key, encryptionScheme) => {
   const nodeRsa = new NodeRSA(key, 'public', {
 		encryptionScheme: encryptionScheme || undefined,
 	});
-  return this.key.encrypt(
+  return nodeRsa.encrypt(
     value,
     'base64',
   );
