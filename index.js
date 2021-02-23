@@ -12,7 +12,7 @@ const encryptStringWithRsaPublicKey = (value, key, padding) => {
 };
 
 module.exports.templateTags = [{
-    name: 'node-rsa',
+    name: 'nodersa',
     displayName: 'NODE RSA',
     description: 'Encrypt value using NODE-RSA',
     args: [
