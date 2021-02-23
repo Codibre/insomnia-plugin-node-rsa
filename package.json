@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-node-rsa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RSA encryption for Insomnia REST Client using node-rsa",
   "main": "index.js",
   "repository": "https://github.com/MikuZZZ/insomnia-plugin-node-rsa.git",
